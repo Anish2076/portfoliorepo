@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anish Kumar M | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --accent-color: #e63946;
+      --card-bg: #f8f9fa;
+      --link-color: #1d3557;
+    }
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #eeeeee;
+      --accent-color: #e63946;
+      --card-bg: #1e1e1e;
+      --link-color: #a8dadc;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Arial', sans-serif;
+      transition: background 0.3s, color 0.3s;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: var(--link-color);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .theme-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .theme-switcher button {
+      padding: 5px 10px;
+      margin-left: 5px;
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .intro img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid var(--accent-color);
+    }
+    .intro h2 {
+      font-size: 2rem;
+    }
+    .intro p {
+      margin-top: 10px;
+    }
+    .projects, .about, .contact {
+      margin-top: 60px;
+    }
+    .projects h2, .about h2, .contact h2 {
+      text-align: center;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+    
+    /* Updated Project Section CSS */
+    .project-list {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px;
+    }
+    .project-card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 15px;
+      width: 280px;
+      min-height: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+    .project-card h3 {
+      margin-bottom: 12px;
+      color: var(--accent-color);
+      font-size: 1.5rem;
+    }
+    .project-card p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    .project-card a {
+      background: var(--accent-color);
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+    .project-card a:hover {
+      background: #d62828;
+    }
+    
+    .about p, .contact p {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.8rem;
+      color: var(--link-color);
+    }
+    a {
+      color: var(--link-color);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="theme-switcher">
+    <button onclick="setTheme('light')">Light</button>
+    <button onclick="setTheme('dark')">Dark</button>
+  </div>
+
+  <header>
+    <h1>Welcome to My Portfolio Website!</h1>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <img src="myphoto.jpg.jpg" alt="Profile Photo">
+    <h2>Hey, I'm <span style="color: var(--accent-color);">Anish Kumar M</span></h2>
+    <p>Frontend Developer | Designer</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Gallery Website</h3>
+        <p>Here it shows the Website Of Image Gallery.</p>
+        <a href="https://anish2076.github.io/imagegalleryrepo/">Image Gallery Website</a>
+      </div>
+      <div class="project-card">
+        <h3>Calculator Website</h3>
+        <p>Here it works website of modern calculator.</p>
+        <a href="https://anish2076.github.io/calculatorrepo/">Calculator Website</a>
+      </div>
+      <div class="project-card">
+        <h3>Music Player Website</h3>
+        <p>Here it works website of Music Player Website.</p>
+        <a href="https://anish2076.github.io/musicplayerrepo/">Music Player Website</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I'm Anish Kumar.M , And I Am Passionate To Become A Front End Developer And UI/UX Designer. Currently I Am Finishing My Degree Bachelor Of Computer Applications(BCA). And I'm Passionate Of Building New Codes And Design By Building New Innovative Ideas.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>
+      📞 Contact: 8217634422 <br>
+      ✉️ Email: <a href="mailto:anishjogi10@gmail.com">anishjogi10@gmail.com</a> <br>
+      🔗 LinkedIn: <a href="https://www.linkedin.com/in/anish-kumar-m-876478302" target="_blank">Visit LinkedIn</a> <br>
+      🛠️ GitHub: <a href="https://github.com/Anish2076" target="_blank">Visit GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Anish Kumar M. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    }
+  </script>
+</body>
+</html>
